@@ -5,6 +5,7 @@
  */
 package entity;
 
+import java.util.Arrays;
 import java.util.Date;
 
 /**
@@ -13,7 +14,7 @@ import java.util.Date;
  */
 public class History {
     Product[] product;
-    Seller seller;
+    Seller[] seller;
     Buyer buyer;
     Date date;
     
@@ -29,11 +30,11 @@ public class History {
         this.product = product;
     }
 
-    public Seller getSeller() {
+    public Seller[] getSeller() {
         return seller;
     }
 
-    public void setSeller(Seller seller) {
+    public void setSeller(Seller[] seller) {
         this.seller = seller;
     }
 
@@ -52,5 +53,12 @@ public class History {
     public void setDate(Date date) {
         this.date = date;
     }
+
+    @Override
+    public String toString() {
+        return "History:" + Arrays.toString(product) + ",\n" + Arrays.toString(seller) + ",\n" + buyer + ",\ndate: " + date + '}';
+    }
+    
+    
     
 }

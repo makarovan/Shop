@@ -50,6 +50,11 @@ public class Buyer {
     public void setAdress(String adress) {
         this.adress = adress;
     }
+
+    @Override
+    public String toString() {
+        return "Buyer:\n" + "firstname: "  + firstname + ", lastname: " + lastname + ", phone: " + phone + ", adress: " + adress;
+    }
     
     
 }

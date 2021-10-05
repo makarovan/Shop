@@ -32,6 +32,11 @@ public class Seller {
         this.productCategory = productCategory;
     }
 
+    @Override
+    public String toString() {
+        return "Seller: " + name + ", Category: " + productCategory;
+    }
+
    
     
     
