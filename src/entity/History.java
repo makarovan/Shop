@@ -13,30 +13,39 @@ import java.util.Date;
  * @author pupil
  */
 public class History {
-    Product[] product;
-    Seller[] seller;
+    Product product;
+    //Seller seller;
     Buyer buyer;
     Date date;
+    //double price;
     
     public History(){
         
     }
 
-    public Product[] getProduct() {
+//    public double getPrice() {
+//        return price;
+//    }
+//
+//    public void setPrice(double price) {
+//        this.price = price;
+//    }
+
+    public Product getProduct() {
         return product;
     }
 
-    public void setProduct(Product[] product) {
+    public void setProduct(Product product) {
         this.product = product;
     }
 
-    public Seller[] getSeller() {
-        return seller;
-    }
-
-    public void setSeller(Seller[] seller) {
-        this.seller = seller;
-    }
+//    public Seller getSeller() {
+//        return seller;
+//    }
+//
+//    public void setSeller(Seller seller) {
+//        this.seller = seller;
+//    }
 
     public Buyer getBuyer() {
         return buyer;
@@ -56,7 +65,7 @@ public class History {
 
     @Override
     public String toString() {
-        return "History:" + Arrays.toString(product) + ",\n" + Arrays.toString(seller) + ",\n" + buyer + ",\ndate: " + date + '}';
+        return "History:" + product + ",\n" /*+ seller*/ + ",\n" + buyer + ",\ndate: " + date + '}';
     }
     
     

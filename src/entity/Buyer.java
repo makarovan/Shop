@@ -10,30 +10,31 @@ package entity;
  * @author pupil
  */
 public class Buyer {
-    String firstname;
-    String lastname;
+    String name;
     String phone;
     String adress;
+    double money;
     
     public Buyer(){
         
     }
 
-    public String getFirstname() {
-        return firstname;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getLastname() {
-        return lastname;
+    public double getMoney() {
+        return money;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setMoney(double money) {
+        this.money = money;
     }
+
 
     public String getPhone() {
         return phone;
@@ -53,7 +54,7 @@ public class Buyer {
 
     @Override
     public String toString() {
-        return "Buyer:\n" + "firstname: "  + firstname + ", lastname: " + lastname + ", phone: " + phone + ", adress: " + adress;
+        return "Buyer:\n" + "firstname: "  + name +  ", phone: " + phone + ", adress: " + adress +", money: "+money;
     }
     
     

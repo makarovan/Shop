@@ -11,14 +11,14 @@ package entity;
  */
 public class Product {
     private String productName;
-    Seller seller;
+    private Seller seller;
     private double price;
     
     public Product(){
         
     }
 
-    public String getProdyctName() {
+    public String getProductName() {
         return productName;
     }
 
@@ -44,7 +44,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "\nProducts: " + productName + ", " + seller + ", price = " + price ;
+        return "Products: " + productName + ", " + seller + ", price = " + price ;
     }
     
     
