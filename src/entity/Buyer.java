@@ -5,11 +5,13 @@
  */
 package entity;
 
+import java.io.Serializable;
+
 /**
  *
  * @author pupil
  */
-public class Buyer {
+public class Buyer implements Serializable{
     String name;
     String phone;
     String adress;

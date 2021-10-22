@@ -9,11 +9,13 @@ import entity.Buyer;
 import entity.History;
 import entity.Product;
 import entity.Seller;
+import interfaces.Keeping;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Scanner;
+import keeper.FileKeeper;
 
 
 
@@ -27,8 +29,12 @@ public class App {
     List<Seller> sellers = new ArrayList<>();
     List<Buyer> buyers = new ArrayList<>();
     List<History> histories = new ArrayList<>();
+    Keeping keeper = new FileKeeper();
     
     public App() {
+        products = keeper.loadProducts();
+        buyers = keeper.loadBuyers();
+        histories = keeper.loadHistories();
     }
     public void run(){
         String repeat = "y";
@@ -53,6 +59,7 @@ public class App {
                 case 1: 
                     System.out.println("Добавление товара");
                     products.add(addProduct());//добавление в список
+                    keeper.saveProducts(products);
                     break;
                     
                 case 2:
@@ -67,6 +74,7 @@ public class App {
                 case 3:
                     System.out.println("Добавления покупателя");
                     buyers.add(addBuyer());
+                    keeper.saveBuyers(buyers);
                     break;
                    
                 case 4:
@@ -81,8 +89,10 @@ public class App {
                 case 5:
                     System.out.println("Продать товар");
                     histories.add(addHistory());
+                    keeper.saveHistories(histories);
                     break;
                 case 6:
+                    System.out.println("Проданные товары");
                     for (int i = 0; i < histories.size(); i++) {
                         if (histories.get(i)!=null){
                             System.out.printf("%d. Товар %s продан %s%n",

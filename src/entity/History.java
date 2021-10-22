@@ -5,6 +5,7 @@
  */
 package entity;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Date;
 
@@ -12,7 +13,7 @@ import java.util.Date;
  *
  * @author pupil
  */
-public class History {
+public class History implements Serializable{
     Product product;
     //Seller seller;
     Buyer buyer;
